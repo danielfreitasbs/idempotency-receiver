@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: idempotency-receiver
+  kafka:
+    producer:
+      properties:
+        bootstrap.servers: kafka:9092
+        key.serializer: org.apache.kafka.common.serialization.StringSerializer
+        value.serializer: org.apache.kafka.common.serialization.StringSerializer
+      template:
+        default-topic: lap-time-completed
